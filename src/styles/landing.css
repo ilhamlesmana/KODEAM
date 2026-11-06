@@ -1,0 +1,201 @@
+/* ==========================================================================
+   NEXORA × SMK MARHAS LANDING PAGE STYLESHEET (Parallax & Scroll Craft)
+   Terpisah sepenuhnya dari Dashboard & Login agar tidak bentrok
+   ========================================================================== */
+
+.nexora-landing-scope {
+  background-color: #faf8f5;
+  color: #0f172a;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Tekstur Kertas Blueprint / Engineering halus */
+.nexora-blueprint-bg {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+}
+
+.nexora-dots-bg {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.14) 1.25px, transparent 1.25px);
+  background-size: 24px 24px;
+}
+
+/* Navbar Floating Pill Taktil & Modern Glassmorphism */
+.nexora-navbar-pill {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 10px 30px -6px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nexora-navbar-pill.is-scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(15, 23, 42, 0.18);
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.06);
+}
+
+/* Kartu Editorial Handcrafted (Anti AI-Slop) */
+.nexora-card-tactile {
+  background: #ffffff;
+  border: 2px solid #0f172a;
+  box-shadow: 0 6px 0 0 #0f172a;
+  border-radius: 1.5rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nexora-card-tactile:hover {
+  transform: translate(-3px, -5px);
+  box-shadow: 9px 11px 0 0 #0f172a;
+}
+
+.nexora-card-dark {
+  background: #0f172a;
+  color: #f8fafc;
+  border: 2px solid #0f172a;
+  box-shadow: 0 8px 0 0 #1d4ed8;
+  border-radius: 1.75rem;
+}
+
+/* Tombol Aksi Taktil */
+.nexora-btn-primary {
+  background: #1d4ed8;
+  color: #ffffff;
+  border: 2px solid #0f172a;
+  box-shadow: 0 5px 0 0 #0f172a;
+  border-radius: 1rem;
+  font-weight: 800;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nexora-btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 0 #0f172a;
+}
+
+.nexora-btn-primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 0 #0f172a;
+}
+
+.nexora-btn-yellow {
+  background: #facc15;
+  color: #0f172a;
+  border: 2px solid #0f172a;
+  box-shadow: 0 5px 0 0 #0f172a;
+  border-radius: 1rem;
+  font-weight: 800;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nexora-btn-yellow:hover {
+  background: #fde047;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 0 #0f172a;
+}
+
+.nexora-btn-yellow:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 0 #0f172a;
+}
+
+.nexora-btn-secondary {
+  background: #ffffff;
+  color: #0f172a;
+  border: 2px solid #0f172a;
+  box-shadow: 0 5px 0 0 #0f172a;
+  border-radius: 1rem;
+  font-weight: 800;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nexora-btn-secondary:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 0 #0f172a;
+}
+
+/* Badge Stiker Editorial */
+.nexora-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  border: 2px solid #0f172a;
+  box-shadow: 0 3px 0 0 #0f172a;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   SCROLL-REVEAL & PARALLAX TRANSITION CLASSES
+   ========================================================================== */
+
+.parallax-layer {
+  will-change: transform;
+  transition: transform 0.08s linear;
+}
+
+.reveal-item {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition:
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up {
+  transform: translate3d(0, 56px, 0) scale(0.97);
+}
+
+.reveal-left {
+  transform: translate3d(-56px, 0, 0) rotate(-1.5deg);
+}
+
+.reveal-right {
+  transform: translate3d(56px, 0, 0) rotate(1.5deg);
+}
+
+.reveal-scale {
+  transform: scale(0.88) translate3d(0, 30px, 0);
+}
+
+.reveal-item.is-inview {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+}
+
+/* Stagger delays */
+.stagger-1 { transition-delay: 80ms; }
+.stagger-2 { transition-delay: 160ms; }
+.stagger-3 { transition-delay: 240ms; }
+.stagger-4 { transition-delay: 320ms; }
+.stagger-5 { transition-delay: 400ms; }
+.stagger-6 { transition-delay: 480ms; }
+
+/* Marquee Ticker Berjalan */
+@keyframes nexoraMarquee {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.nexora-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: nexoraMarquee 28s linear infinite;
+}
+
+.nexora-marquee-track:hover {
+  animation-play-state: paused;
+}

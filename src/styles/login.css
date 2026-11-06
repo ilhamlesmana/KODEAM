@@ -1,0 +1,164 @@
+/* ==========================================================================
+   NEXORA × SMK MARHAS MODERN LOGIN STYLESHEET
+   Elegan, Interaktif, Modern Glassmorphism & Tactile Micro-interactions
+   ========================================================================== */
+
+.marhas-login-scope {
+  background-color: #eef2f9;
+  background-image:
+    radial-gradient(at 10% 12%, rgba(59, 91, 245, 0.16) 0px, transparent 48%),
+    radial-gradient(at 88% 15%, rgba(28, 212, 133, 0.14) 0px, transparent 48%),
+    radial-gradient(at 85% 88%, rgba(99, 102, 241, 0.14) 0px, transparent 50%),
+    radial-gradient(at 15% 85%, rgba(245, 158, 11, 0.12) 0px, transparent 45%);
+  color: #0f172a;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Grid halus modern */
+.marhas-grid-pattern {
+  background-size: 36px 36px;
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+}
+
+/* Kartu Utama Split Login Modern */
+.marhas-auth-container {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow:
+    0 25px 60px -15px rgba(15, 23, 42, 0.12),
+    0 10px 25px -10px rgba(59, 91, 245, 0.08);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+/* Panel Visual Kiri untuk Siswa (Indigo - Royal Blue - Cyan Ceria) */
+.marhas-banner-student {
+  background: linear-gradient(140deg, #1e3a8a 0%, #3b5bf5 52%, #0ea5e9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Panel Visual Kiri untuk Guru (Deep Slate - Royal Indigo - Emerald Accent) */
+.marhas-banner-teacher {
+  background: linear-gradient(140deg, #0f172a 0%, #1e2e6e 52%, #3b5bf5 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ornamen lingkaran dekoratif di dalam banner */
+.marhas-deco-circle {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Kartu Mengambang Glass / White di Panel Kiri */
+.marhas-sticker {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.22);
+  border-radius: 1.25rem;
+  color: #0f172a;
+}
+
+.marhas-pill-yellow {
+  background: #facc15;
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(250, 204, 21, 0.35);
+}
+
+.marhas-pill-emerald {
+  background: #1cd485;
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(28, 212, 133, 0.35);
+}
+
+/* Input Form Login Modern */
+.marhas-input {
+  width: 100%;
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 1rem;
+  color: #0f172a;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.marhas-input::placeholder {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.marhas-input:hover {
+  border-color: #cbd5e1;
+  background-color: #ffffff;
+}
+
+.marhas-input:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #3b5bf5;
+  box-shadow: 0 0 0 4px rgba(59, 91, 245, 0.12);
+}
+
+/* Tombol Utama Submit Modern */
+.marhas-btn-submit {
+  border-radius: 1rem;
+  font-weight: 800;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.marhas-btn-submit:hover:not(:disabled) {
+  transform: translateY(-1.5px);
+}
+
+.marhas-btn-submit:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* Tab Switcher Siswa / Guru */
+.marhas-role-switcher {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 0.3rem;
+}
+
+.marhas-role-tab-active {
+  background: #3b5bf5;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(59, 91, 245, 0.28);
+  font-weight: 800;
+}
+
+/* Animasi Mengambang Halus */
+@keyframes marhasFloatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes marhasFloatReverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.animate-marhas-float {
+  animation: marhasFloatSlow 5s ease-in-out infinite;
+}
+
+.animate-marhas-float-reverse {
+  animation: marhasFloatReverse 6s ease-in-out infinite;
+}
